@@ -1,0 +1,10 @@
+---
+- name: Stwórz folder na pulpicie
+  hosts: your_host_group_or_host
+  become: yes
+  tasks:
+    - name: Stwórz folder na pulpicie
+      file:
+        path: "/ścieżka/do/pulpitu/test1"
+        state: directory
+        mode: '0755'
