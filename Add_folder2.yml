@@ -1,6 +1,6 @@
 ---
 - name: Stwórz folder na pulpicie w Windows
-  hosts: RLCNC-HOSTS
+  hosts: RLCNC-100
   vars:
     ansible_user: it
     ansible_password: "Rladmin100"
