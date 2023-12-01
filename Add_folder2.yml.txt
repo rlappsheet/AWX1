@@ -1,0 +1,15 @@
+---
+- name: Stwórz folder na pulpicie w Windows
+  hosts: rlcnc_hosts
+  vars:
+    ansible_user: it
+    ansible_password: "Rladmin100"
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore
+    dest_path: 'C:\Users\IT.RLCNC-100\Desktop\test1'
+
+  tasks:
+    - name: Stwórz folder na pulpicie
+      win_file:
+        path: "{{ dest_path }}"
+        state: directory
